@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { BadgeCheck, Database, FileSpreadsheet, MapPin, PieChart, Table2, TrendingUp } from 'lucide-react';
 import { profile } from '../data/content';
+import { ProfilePhoto } from './ui/ProfilePhoto';
 import { TiltCard } from './ui/TiltCard';
 
 const coreSkills = [
@@ -51,9 +52,10 @@ export function About() {
                 <div className="pointer-events-none absolute -bottom-20 -left-14 h-52 w-52 rounded-full bg-cyan-500/12 blur-3xl" />
 
                 <div className="relative flex items-center gap-5">
-                  <div className="relative">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-violet-600 via-indigo-500 to-cyan-500 font-display text-2xl font-bold text-white shadow-glow-sm">
-                      {profile.initials}
+                  <div className="relative shrink-0">
+                    <div className="absolute -inset-1 rounded-[26px] bg-gradient-to-br from-violet-500 via-indigo-400 to-cyan-400 opacity-70 blur-[6px]" />
+                    <div className="relative h-24 w-24 rounded-3xl border border-white/20 shadow-glow-sm">
+                      <ProfilePhoto />
                     </div>
                     <span className="absolute -bottom-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-white/15 bg-void">
                       <BadgeCheck size={14} className="text-cyan-300" />
