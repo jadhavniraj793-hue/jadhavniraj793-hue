@@ -95,22 +95,25 @@ function Cosmos({ quality }: { quality: 'high' | 'medium' }) {
         {high && <DataTicks count={64} radius={3.98} />}
       </group>
 
-      {/* ---------- Floating holographic reports ---------- */}
+      {/* ---------- Floating holographic reports ----------
+          Desktop composition: the left third belongs to the headline copy, so
+          the holograms ring the globe above / below it and the right column
+          keeps a clean lane for the telemetry cards. */}
       <HoloPie
-        position={compact ? [-2.15, 2.35, -1.6] : [-4.55, 1.75, -0.4]}
-        scale={compact ? 0.6 : 1}
+        position={compact ? [-1.9, 2.6, -1.6] : [-0.4, 3.0, -1.8]}
+        scale={compact ? 0.62 : 1}
       />
       <HoloLine
-        position={compact ? [2.05, -2.5, 1.2] : [4.55, -1.35, 0.6]}
-        scale={compact ? 0.72 : 1.05}
+        position={compact ? [2.1, -2.75, 1.2] : [1.6, -2.95, 0.6]}
+        scale={compact ? 0.7 : 1}
       />
       <NodeCluster
-        position={compact ? [-2.6, -1.9, 1.4] : [-3.3, -2.15, 1.1]}
+        position={compact ? [-2.55, -2.05, 1.4] : [-3.3, -1.6, 1.1]}
         count={high ? 7 : 5}
         spread={compact ? 1.8 : 2.4}
       />
-      <NodeCluster position={[3.7, 2.5, -2.6]} count={5} spread={2} seed={77} />
-      <WireCubes count={high ? 6 : 3} spread={compact ? 8 : 11} />
+      <NodeCluster position={compact ? [2.6, 2.4, -2.6] : [3.2, 2.9, -2.6]} count={5} spread={2} seed={77} />
+      <WireCubes count={high ? 6 : 3} spread={compact ? 8 : 11.5} />
     </CosmosRig>
   );
 }

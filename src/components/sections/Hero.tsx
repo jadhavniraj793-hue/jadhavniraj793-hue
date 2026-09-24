@@ -110,7 +110,8 @@ export function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="relative mx-auto w-full max-w-7xl px-5 sm:px-8"
       >
-        <div className="max-w-2xl lg:max-w-[46rem]">
+        {/* Kept narrower than the globe's left edge so copy and 3D never fight. */}
+        <div className="max-w-2xl lg:max-w-[42rem]">
           <Reveal y={16}>
             <div className="inline-flex flex-wrap items-center gap-2 rounded-full glass-soft px-3.5 py-1.5">
               <span className="relative flex h-2 w-2">
