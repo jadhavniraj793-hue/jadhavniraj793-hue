@@ -1,0 +1,377 @@
+@import 'tailwindcss';
+
+/* ==================================================================
+   DESIGN SYSTEM — "Futuristic Data Cosmos / Cybernetic Analytics Hub"
+   Tailwind v4 CSS-first theme. Every token below is available as a
+   utility class, e.g. `bg-space`, `text-aqua`, `font-display`.
+   ================================================================== */
+
+@theme {
+  /* --- Surfaces ------------------------------------------------ */
+  --color-space: #050811;
+  --color-abyss: #0a0f1d;
+  --color-deep: #0d1426;
+  --color-panel: #111a2e;
+
+  /* --- Accents -------------------------------------------------- */
+  --color-aqua: #00f5d4;
+  --color-aqua-deep: #06b6d4;
+  --color-violet-core: #7b2cbf;
+  --color-violet-glow: #8b5cf6;
+  --color-plasma: #22d3ee;
+
+  /* --- Type ----------------------------------------------------- */
+  --color-mist: #f8fafc;
+  --color-ash: #94a3b8;
+  --color-ash-dim: #64748b;
+
+  /* Self-hosted via @fontsource-variable — see src/app/layout.tsx */
+  --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* --- Motion --------------------------------------------------- */
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 12s ease-in-out infinite;
+  --animate-pulse-glow: pulseGlow 3.6s ease-in-out infinite;
+  --animate-spin-slow: spin 28s linear infinite;
+  --animate-spin-slower: spin 55s linear infinite;
+  --animate-aurora: aurora 20s ease-in-out infinite;
+  --animate-scan: scan 7s linear infinite;
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-twinkle: twinkle 4.5s ease-in-out infinite;
+  --animate-grid-pan: gridPan 30s linear infinite;
+  --animate-shimmer: shimmer 2.8s linear infinite;
+  --animate-blip: blip 2.4s ease-out infinite;
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes aurora {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.55;
+  }
+  33% {
+    transform: translate3d(4%, -3%, 0) scale(1.12);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate3d(-3%, 4%, 0) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(1200%);
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gridPan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1200px;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes blip {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================================================================
+   BASE
+   ================================================================== */
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-color: var(--color-aqua-deep) transparent;
+  }
+
+  body {
+    background-color: var(--color-space);
+    color: var(--color-mist);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-aqua) 35%, transparent);
+    color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+
+  /* Custom scrollbar (WebKit) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050811;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-aqua-deep), var(--color-violet-core));
+    border-radius: 9999px;
+    border: 2px solid #050811;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--color-aqua), var(--color-violet-glow));
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-aqua);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* ==================================================================
+   LENIS SMOOTH SCROLL
+   ================================================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ==================================================================
+   COMPONENT-LEVEL UTILITIES
+   ================================================================== */
+
+/* Frosted glass panel used by every card on the site.
+   Plain rgba first, then a colour-mix upgrade where supported. */
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.035);
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.02) 42%,
+    rgba(0, 245, 212, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 24px 60px -32px rgba(0, 0, 0, 0.9);
+}
+
+@utility glass-soft {
+  background-color: rgba(10, 15, 29, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(100deg, #f8fafc 0%, #00f5d4 38%, #22d3ee 58%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-aqua {
+  background-image: linear-gradient(100deg, #00f5d4 0%, #22d3ee 55%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Neon hairline that reads as a glowing border without a border-image. */
+@utility neon-ring {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      130deg,
+      rgba(0, 245, 212, 0.65),
+      transparent 35%,
+      transparent 62%,
+      rgba(139, 92, 246, 0.6)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.45s var(--ease-spring);
+    pointer-events: none;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@utility grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 68px 68px;
+}
+
+@utility noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+@utility preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Animated conic sweep used behind hero + section accents. */
+@utility sweep-glow {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 245, 212, 0.28) 70deg,
+    transparent 150deg,
+    rgba(139, 92, 246, 0.24) 250deg,
+    transparent 330deg
+  );
+}
+
+/* Shimmering text used for the "loading data" states. */
+@utility shimmer-text {
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(0, 245, 212, 0.55) 50%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ==================================================================
+   REDUCED MOTION — kill decorative motion, keep the content usable.
+   ================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
