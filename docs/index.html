@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niraj Jadhav | Data Analyst Portfolio</title>
+  <meta name="description" content="Niraj Jadhav, aspiring Data Analyst skilled in Excel, SQL, Power BI and Python. Currently learning Machine Learning, AI, LangChain and LangGraph." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='66' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>NJ</text></svg>" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">NJ<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact" class="btn btn-sm">Hire Me</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="dot"></span> Open to opportunities &amp; collaboration</p>
+          <h1>Hi, I'm <span class="gradient">Niraj Jadhav</span></h1>
+          <h2 class="typed-line">I'm a <span id="typed" class="typed"></span><span class="cursor">|</span></h2>
+          <p class="lead">
+            I turn raw data into clear, actionable insights using
+            <strong>Excel</strong>, <strong>SQL</strong>, <strong>Power BI</strong> &amp; <strong>Python</strong>,
+            and I'm growing into AI &amp; Machine Learning.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+            </a>
+            <a href="https://instagram.com/nirajjadhav4834" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.7.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.7 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+            </a>
+            <a href="mailto:jadhavniraj793@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard-style visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="dash-card">
+            <div class="dash-head">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="mono">insights_dashboard.pbix</span>
+            </div>
+            <div class="kpis">
+              <div class="kpi"><small>Revenue</small><b data-count="248" data-prefix="$" data-suffix="K">$0K</b><em class="up">▲ 12.4%</em></div>
+              <div class="kpi"><small>Orders</small><b data-count="3920">0</b><em class="up">▲ 8.1%</em></div>
+              <div class="kpi"><small>Churn</small><b data-count="4" data-suffix="%">0%</b><em class="down">▼ 1.2%</em></div>
+            </div>
+            <div class="chart-bars">
+              <span style="--h:40%"></span><span style="--h:55%"></span><span style="--h:48%"></span>
+              <span style="--h:70%"></span><span style="--h:62%"></span><span style="--h:82%"></span>
+              <span style="--h:74%"></span><span style="--h:92%"></span>
+            </div>
+            <svg class="chart-line" viewBox="0 0 300 80" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lg" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#22d3ee" stop-opacity=".45"/>
+                  <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="area" d="M0,70 L40,58 L80,62 L120,40 L160,46 L200,24 L240,30 L300,8 L300,80 L0,80 Z" fill="url(#lg)"/>
+              <path class="line" d="M0,70 L40,58 L80,62 L120,40 L160,46 L200,24 L240,30 L300,8" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+            </svg>
+            <pre class="mono sql"><span class="k">SELECT</span> region, <span class="f">SUM</span>(sales)
+<span class="k">FROM</span> orders <span class="k">GROUP BY</span> region;</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-tag">01 · About Me</p>
+        <h2 class="section-title">From History to <span class="gradient">Data</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm an <strong>aspiring Data Analyst</strong> with a unique path. I started with a
+              <strong>BA in History</strong>, where I learned to dig through sources, spot patterns and tell
+              compelling stories from evidence. Today I apply that same curiosity to data.
+            </p>
+            <p>
+              I build real-world analytics projects with <strong>Excel, SQL, Power BI and Python</strong>, cleaning
+              messy datasets, writing queries, and designing dashboards that help people make better decisions.
+            </p>
+            <p>
+              Right now I'm expanding into <strong>Machine Learning, AI, LangChain &amp; LangGraph</strong> to build
+              smarter, AI-powered data solutions.
+            </p>
+            <a href="mailto:jadhavniraj793@gmail.com" class="btn">Let's Talk</a>
+          </div>
+          <div class="about-cards">
+            <div class="info-card reveal">
+              <div class="ic">📊</div>
+              <h3>Working on</h3>
+              <p>Data Analytics projects using Excel, SQL, Power BI &amp; Python</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="ic">🌱</div>
+              <h3>Learning</h3>
+              <p>Python, Machine Learning, AI, LangChain &amp; LangGraph</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="ic">🤝</div>
+              <h3>Collaborate on</h3>
+              <p>Data Analytics, Business Intelligence &amp; AI projects</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="ic">💬</div>
+              <h3>Ask me about</h3>
+              <p>Excel, SQL, Power BI, Data Analytics &amp; Visualization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <p class="section-tag">02 · Skills</p>
+        <h2 class="section-title">My <span class="gradient">Toolkit</span></h2>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>📈 Core Analytics</h3>
+            <div class="skill"><div class="skill-top"><span>Microsoft Excel</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>SQL</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>Power BI</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>Python (Pandas, NumPy)</span><span>70%</span></div><div class="bar"><i style="--w:70%"></i></div></div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>🧠 Currently Learning</h3>
+            <div class="skill"><div class="skill-top"><span>Machine Learning</span><span>45%</span></div><div class="bar"><i style="--w:45%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>Generative AI</span><span>40%</span></div><div class="bar"><i style="--w:40%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>LangChain</span><span>35%</span></div><div class="bar"><i style="--w:35%"></i></div></div>
+            <div class="skill"><div class="skill-top"><span>LangGraph</span><span>30%</span></div><div class="bar"><i style="--w:30%"></i></div></div>
+          </div>
+        </div>
+
+        <div class="chips reveal">
+          <span>Data Cleaning</span><span>Data Visualization</span><span>DAX</span><span>Power Query</span>
+          <span>Pivot Tables</span><span>Joins &amp; CTEs</span><span>Pandas</span><span>NumPy</span>
+          <span>Matplotlib</span><span>Plotly</span><span>scikit-learn</span><span>Jupyter</span>
+          <span>Git &amp; GitHub</span><span>Storytelling with Data</span><span>Canva</span><span>Notion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-tag">03 · Projects</p>
+        <h2 class="section-title">Featured <span class="gradient">Work</span></h2>
+
+        <div class="filters reveal" role="tablist">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="powerbi">Power BI</button>
+          <button class="filter" data-filter="sql">SQL</button>
+          <button class="filter" data-filter="python">Python</button>
+          <button class="filter" data-filter="excel">Excel</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project reveal" data-cat="powerbi">
+            <div class="project-thumb t1"><span>📊</span></div>
+            <div class="project-body">
+              <h3>Sales Performance Dashboard</h3>
+              <p>Interactive Power BI dashboard tracking revenue, profit and regional trends, with DAX measures and drill-through pages.</p>
+              <div class="tags"><span>Power BI</span><span>DAX</span><span>Power Query</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="sql">
+            <div class="project-thumb t2"><span>🗄️</span></div>
+            <div class="project-body">
+              <h3>E-Commerce SQL Analysis</h3>
+              <p>Explored customer behaviour, retention and top products using joins, CTEs and window functions on a retail database.</p>
+              <div class="tags"><span>SQL</span><span>CTEs</span><span>Window Functions</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="python">
+            <div class="project-thumb t3"><span>🐍</span></div>
+            <div class="project-body">
+              <h3>Exploratory Data Analysis with Python</h3>
+              <p>Cleaned and analysed a real-world dataset with Pandas, then visualised key insights with Matplotlib &amp; Plotly.</p>
+              <div class="tags"><span>Python</span><span>Pandas</span><span>Plotly</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="excel">
+            <div class="project-thumb t4"><span>📗</span></div>
+            <div class="project-body">
+              <h3>HR Analytics Excel Report</h3>
+              <p>Employee attrition analysis using Pivot Tables, XLOOKUP and dynamic charts in a one-page interactive Excel report.</p>
+              <div class="tags"><span>Excel</span><span>Pivot Tables</span><span>Charts</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="python">
+            <div class="project-thumb t5"><span>🤖</span></div>
+            <div class="project-body">
+              <h3>AI Data Assistant (In Progress)</h3>
+              <p>A LangChain + LangGraph assistant that answers natural-language questions about a dataset by generating SQL.</p>
+              <div class="tags"><span>Python</span><span>LangChain</span><span>LangGraph</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="powerbi sql">
+            <div class="project-thumb t6"><span>🏥</span></div>
+            <div class="project-body">
+              <h3>Healthcare KPI Report</h3>
+              <p>SQL-powered data model feeding a Power BI report on patient volume, wait times and department performance.</p>
+              <div class="tags"><span>SQL</span><span>Power BI</span><span>Data Modeling</span></div>
+              <div class="links">
+                <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Journey ===== -->
+    <section id="journey" class="section alt">
+      <div class="container">
+        <p class="section-tag">04 · Journey</p>
+        <h2 class="section-title">My <span class="gradient">Path</span></h2>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="t-dot"></span>
+            <div class="t-card">
+              <span class="t-when">Foundation</span>
+              <h3>BA in History</h3>
+              <p>Built strong research, critical thinking and storytelling skills: finding patterns in evidence and communicating them clearly.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot"></span>
+            <div class="t-card">
+              <span class="t-when">The Switch</span>
+              <h3>Discovered Data Analytics</h3>
+              <p>Started learning Excel and SQL, and fell in love with turning numbers into decisions.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot"></span>
+            <div class="t-card">
+              <span class="t-when">Building</span>
+              <h3>Power BI &amp; Python Projects</h3>
+              <p>Creating end-to-end projects: cleaning data, modelling it, and building interactive dashboards.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot now"></span>
+            <div class="t-card">
+              <span class="t-when">Now</span>
+              <h3>AI, ML &amp; LangChain</h3>
+              <p>Levelling up with Machine Learning, AI, LangChain and LangGraph to build intelligent data tools.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="section-tag">05 · Contact</p>
+          <h2 class="section-title">Let's work <span class="gradient">together</span></h2>
+          <p class="lead center">
+            I'm open to Data Analyst roles, internships, freelance work and collaborations on
+            Data Analytics, BI &amp; AI projects. My inbox is always open!
+          </p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="row">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Your email" required />
+            </div>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn">Send Message ✉️</button>
+            <p class="form-note">This opens your email app with the message pre-filled.</p>
+          </form>
+
+          <div class="contact-links">
+            <a href="mailto:jadhavniraj793@gmail.com">📧 jadhavniraj793@gmail.com</a>
+            <a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener">💼 LinkedIn</a>
+            <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://instagram.com/nirajjadhav4834" target="_blank" rel="noopener">📸 Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Niraj Jadhav · Built with HTML, CSS &amp; JavaScript</p>
+      <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
