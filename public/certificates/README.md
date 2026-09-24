@@ -10,7 +10,7 @@ drop the scanned certificate images into this folder using these exact file name
 | AWS — AI Practitioner Practice Question Set     | `aws-ai-practitioner-practice.png`   |
 | Microsoft + LinkedIn — Azure Essentials         | `azure-essentials.png`               |
 | Deloitte / Forage — Data Analytics Simulation   | `deloitte-data-analytics-simulation` |
-| Business Analytics with Excel                   | `business-analytics-excel.png`       |
+| Business Analytics with Excel                   | `business-analytics-excel.jpg` ✅ added |
 | Introduction to SQL                             | `introduction-to-sql.png`            |
 | GenAI Powered Data Analytics Job Simulation     | `genai-data-analytics-simulation.png`|
 | TCS iON Career Edge — Young Professional        | `tcs-ion-career-edge.png`            |

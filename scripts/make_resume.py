@@ -184,7 +184,7 @@ certs = [
     "Official Practice Question Set: AWS Certified AI Practitioner — AWS Training & Certification (Completed: August 8, 2026)",
     "Microsoft Azure Essentials Professional Certificate — Microsoft + LinkedIn Learning (Completed: September 4, 2026)",
     "Data Analytics Job Simulation — Deloitte / Forage (Completed: August 5, 2026)",
-    "Business Analytics with Excel (Certificate dated August 9, 2026)",
+    "Business Analytics with Excel — Simplilearn SkillUp (Powered by Microsoft) (August 9, 2026 · Code: 10578697)",
     "Introduction to SQL (Certificate dated September 5, 2026)",
     "GenAI Powered Data Analytics Job Simulation (Completed: August 7, 2026) — EDA, risk profiling, predicting delinquency with AI, business reporting, data storytelling, AI-driven collections strategy",
     "TCS iON Career Edge — Young Professional — TCS iON — Communication, presentation, interview and problem-solving skills, business etiquette, accounting fundamentals, IT foundation skills and AI overview",

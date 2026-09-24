@@ -178,9 +178,12 @@ export const certificates: Certificate[] = [
   {
     id: 'business-analytics-excel',
     title: 'Business Analytics with Excel',
-    kind: 'Certificate',
+    issuer: 'Simplilearn SkillUp',
+    kind: 'Declaration of Completion',
     date: 'August 9, 2026',
+    certId: '10578697',
     accent: '#34d399',
+    image: `${import.meta.env.BASE_URL}certificates/business-analytics-excel.jpg`,
   },
   {
     id: 'introduction-to-sql',

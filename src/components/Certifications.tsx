@@ -309,21 +309,31 @@ function VaultCarousel({ onOpen }: { onOpen: (c: Certificate) => void }) {
                 style={{ background: cert.accent }}
               />
               <div className="flex items-center justify-between">
-                <span
-                  className="flex h-11 w-11 items-center justify-center rounded-2xl font-display text-[13px] font-bold"
-                  style={{
-                    background: `${cert.accent}17`,
-                    color: cert.accent,
-                    border: `1px solid ${cert.accent}40`,
-                  }}
-                >
-                  {(cert.issuer ?? cert.title)
-                    .split(/[\s—-]+/)
-                    .slice(0, 2)
-                    .map((w) => w[0])
-                    .join('')
-                    .toUpperCase()}
-                </span>
+                {cert.image ? (
+                  <img
+                    src={cert.image}
+                    alt=""
+                    loading="lazy"
+                    className="h-11 w-11 rounded-2xl border object-cover"
+                    style={{ borderColor: `${cert.accent}40` }}
+                  />
+                ) : (
+                  <span
+                    className="flex h-11 w-11 items-center justify-center rounded-2xl font-display text-[13px] font-bold"
+                    style={{
+                      background: `${cert.accent}17`,
+                      color: cert.accent,
+                      border: `1px solid ${cert.accent}40`,
+                    }}
+                  >
+                    {(cert.issuer ?? cert.title)
+                      .split(/[\s—-]+/)
+                      .slice(0, 2)
+                      .map((w) => w[0])
+                      .join('')
+                      .toUpperCase()}
+                  </span>
+                )}
                 <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400">
                   {cert.kind}
                 </span>
