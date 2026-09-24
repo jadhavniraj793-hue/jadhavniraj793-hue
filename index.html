@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niraj Laxman Jadhav — Data Analyst | 3D Portfolio</title>
+  <meta name="description" content="Niraj Laxman Jadhav — Data Analyst from Mumbai skilled in Excel, SQL, Python, Power BI & Tableau. Turning raw data into actionable insights." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0e1a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2300f0ff' font-family='monospace' font-weight='bold'>NJ</text></svg>" />
+</head>
+<body>
+
+  <!-- ======== PRELOADER ======== -->
+  <div id="preloader">
+    <div class="loader-bars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="loader-text mono">Loading data<span class="blink">_</span></p>
+  </div>
+
+  <!-- ======== 3D BACKGROUND ======== -->
+  <canvas id="bg3d"></canvas>
+
+  <!-- ======== NAVBAR ======== -->
+  <header id="navbar">
+    <nav class="nav container">
+      <a href="#home" class="logo mono">&lt;<span>NJ</span>/&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-sm btn-outline nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======== HERO ======== -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-hi mono reveal">// Hello World, I am</p>
+          <h1 class="hero-name reveal delay-1">NIRAJ LAXMAN<br /><span class="gradient-text">JADHAV</span></h1>
+          <div class="hero-typing reveal delay-2">
+            <span class="mono">$&nbsp;</span>
+            <span>Data Analyst specializing in&nbsp;</span>
+            <span id="typed" class="typed gradient-text"></span><span class="cursor blink">|</span>
+          </div>
+          <p class="hero-sub reveal delay-3">
+            I transform raw, messy data into clear stories, interactive dashboards and
+            measurable business impact — with <strong>Excel</strong>, <strong>SQL</strong>,
+            <strong>Python</strong>, <strong>Power&nbsp;BI</strong> &amp; <strong>Tableau</strong>.
+          </p>
+          <div class="hero-cta reveal delay-4">
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-chart-column"></i>&nbsp; Explore My Work</a>
+            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i>&nbsp; Get In Touch</a>
+          </div>
+          <div class="hero-meta mono reveal delay-4">
+            <span><i class="fa-solid fa-location-dot"></i> Koper, Mumbai</span>
+            <span><i class="fa-solid fa-envelope"></i> jadhavniraj793@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i> +91 72087 01481</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-3">
+          <div class="avatar-ring" data-tilt>
+            <div class="avatar-card">
+              <img src="assets/img/avatar.jpg" alt="Niraj Laxman Jadhav — Data Analyst" />
+            </div>
+            <div class="float-chip chip-1 mono"><i class="fa-solid fa-database"></i> SQL</div>
+            <div class="float-chip chip-2 mono"><i class="fa-solid fa-chart-line"></i> Power BI</div>
+            <div class="float-chip chip-3 mono"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="float-chip chip-4 mono"><i class="fa-solid fa-table-cells"></i> Tableau</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint mono">
+        <span></span>
+        <p>scroll to explore</p>
+      </div>
+
+      <!-- social rail -->
+      <div class="social-rail">
+        <a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:jadhavniraj793@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <span class="rail-line"></span>
+      </div>
+    </section>
+
+    <!-- ======== ABOUT ======== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="mono section-tag">&lt;about /&gt;</p>
+          <h2>Career <span class="gradient-text">Summary</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass reveal" data-tilt>
+            <div class="about-avatar">
+              <img src="assets/img/avatar.jpg" alt="Niraj Jadhav" />
+            </div>
+            <h3>Niraj Laxman Jadhav</h3>
+            <p class="mono role-line">Data Analyst</p>
+            <ul class="about-facts mono">
+              <li><i class="fa-solid fa-location-dot"></i> Koper, Mumbai, India</li>
+              <li><i class="fa-solid fa-graduation-cap"></i> B.A. Economics — Mumbai Univ.</li>
+              <li><i class="fa-solid fa-briefcase"></i> Open to Data Analyst roles</li>
+              <li><i class="fa-solid fa-circle status-dot"></i> Available for opportunities</li>
+            </ul>
+          </div>
+
+          <div class="about-text reveal delay-1">
+            <p>
+              Detail-oriented and analytically minded <strong>Data Analyst</strong> with hands-on project
+              experience across <strong>Excel, SQL, Python, Power BI and Tableau</strong>. Skilled at cleaning,
+              analyzing and visualizing data to uncover trends and support data-driven decision-making.
+            </p>
+            <p>
+              Certified across the core BI &amp; analytics toolchain, with a strong foundation in statistics
+              from a <strong>B.A. in Economics</strong>. Eager to apply analytical rigor and problem-solving
+              skills to deliver <span class="hl">measurable business insights</span>.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat">
+                <h3 class="mono"><span class="counter" data-target="3">0</span>+</h3>
+                <p>Data Projects</p>
+              </div>
+              <div class="stat">
+                <h3 class="mono"><span class="counter" data-target="5">0</span></h3>
+                <p>Certifications</p>
+              </div>
+              <div class="stat">
+                <h3 class="mono"><span class="counter" data-target="10">0</span>+</h3>
+                <p>Tools &amp; Techniques</p>
+              </div>
+              <div class="stat">
+                <h3 class="mono"><span class="counter" data-target="100">0</span>%</h3>
+                <p>Commitment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== SKILLS ======== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="mono section-tag">&lt;skills /&gt;</p>
+          <h2>My Analytics <span class="gradient-text">Toolkit</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Data Analysis &amp; Tools</h3>
+            <ul class="skill-list">
+              <li><span class="mono">Excel</span> — Pivot Tables, VLOOKUP, Charts</li>
+              <li><span class="mono">SQL</span> — Joins, Aggregations, Subqueries</li>
+              <li><span class="mono">Python</span> — Pandas, NumPy, Matplotlib, Seaborn</li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal delay-1" data-tilt>
+            <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Business Intelligence</h3>
+            <ul class="skill-list">
+              <li><span class="mono">Power BI</span> — interactive dashboards</li>
+              <li><span class="mono">Tableau</span> — visual analytics</li>
+              <li><span class="mono">Storytelling</span> — insight-driven narratives</li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal delay-2" data-tilt>
+            <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Techniques</h3>
+            <ul class="skill-list">
+              <li>Data Cleaning &amp; Transformation</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+              <li>Trend &amp; Pattern Analysis</li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal delay-3" data-tilt>
+            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Core Competencies</h3>
+            <ul class="skill-list">
+              <li>Analytical Thinking &amp; Problem Solving</li>
+              <li>Attention to Detail &amp; Data Visualization</li>
+              <li>Quick Learning &amp; Communication</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tool-strip reveal delay-2">
+          <span class="tool-chip mono"><i class="fa-solid fa-file-excel excel"></i> Excel</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-database sql"></i> SQL</span>
+          <span class="tool-chip mono"><i class="fa-brands fa-python py"></i> Python</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-chart-line pbi"></i> Power BI</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-table-cells tab"></i> Tableau</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-table-list pd"></i> Pandas</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-calculator np"></i> NumPy</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-chart-column mpl"></i> Matplotlib</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-water sea"></i> Seaborn</span>
+          <span class="tool-chip mono"><i class="fa-solid fa-magnifying-glass-chart eda"></i> EDA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== PROJECTS ======== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="mono section-tag">&lt;projects /&gt;</p>
+          <h2>Featured <span class="gradient-text">Data Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass reveal" data-tilt>
+            <div class="project-top">
+              <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+              <span class="year-badge mono">2024</span>
+            </div>
+            <h3>Sales Data Analysis</h3>
+            <p class="project-stack mono">Excel &nbsp;+&nbsp; SQL</p>
+            <ul class="project-points">
+              <li>Cleaned &amp; analyzed a multi-region sales dataset to identify top-performing products, regions and customer segments.</li>
+              <li>Built pivot tables and charts in Excel to surface actionable insights for business stakeholders.</li>
+              <li>Wrote SQL queries (joins, aggregations, filtering) to extract key sales metrics from relational tables.</li>
+            </ul>
+            <div class="tags">
+              <span>Excel</span><span>SQL</span><span>Pivot Tables</span><span>Data Cleaning</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass reveal delay-1" data-tilt>
+            <div class="project-top">
+              <div class="project-icon"><i class="fa-solid fa-user-slash"></i></div>
+              <span class="year-badge mono">2024</span>
+            </div>
+            <h3>Customer Churn Analysis</h3>
+            <p class="project-stack mono">Python</p>
+            <ul class="project-points">
+              <li>Performed data cleaning and exploratory data analysis (EDA) on a customer dataset to uncover churn drivers.</li>
+              <li>Used Pandas, Matplotlib and Seaborn to visualize churn patterns and customer behavior trends.</li>
+              <li>Identified key factors influencing churn and proposed data-backed retention strategies.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass reveal delay-2" data-tilt>
+            <div class="project-top">
+              <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <span class="year-badge mono">2023</span>
+            </div>
+            <h3>Economic Data Analysis</h3>
+            <p class="project-stack mono">Excel &nbsp;+&nbsp; Tableau</p>
+            <ul class="project-points">
+              <li>Analyzed macroeconomic indicators and market trends to identify growth patterns using Excel.</li>
+              <li>Designed interactive Tableau dashboards to present findings clearly to non-technical audiences.</li>
+              <li>Delivered insights on economic growth factors supporting academic and analytical conclusions.</li>
+            </ul>
+            <div class="tags">
+              <span>Excel</span><span>Tableau</span><span>Dashboards</span><span>Macro Indicators</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== EXPERIENCE & EDUCATION ======== -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="mono section-tag">&lt;journey /&gt;</p>
+          <h2>Experience &amp; <span class="gradient-text">Education</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass" data-tilt>
+              <span class="year-badge mono">2025 — Present</span>
+              <h3>Aspiring Data Analyst</h3>
+              <p class="tl-sub">Independent Projects &amp; Self-Learning</p>
+              <ul class="project-points">
+                <li>Built hands-on proficiency in data analysis through self-directed projects and structured online coursework.</li>
+                <li>Interpreted datasets to identify trends and patterns that support data-driven decision-making.</li>
+                <li>Built dashboards and reports using Excel, SQL, Power BI and Tableau for end-to-end analysis workflows.</li>
+                <li>Practiced the full analytics pipeline: data cleaning → transformation → analysis → visualization.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-1">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass" data-tilt>
+              <span class="year-badge mono">2023 — 2025</span>
+              <h3>B.A. in Economics</h3>
+              <p class="tl-sub">KV Pendarkar College, Mumbai University</p>
+              <ul class="project-points">
+                <li>Strong foundation in statistics, economic reasoning and quantitative analysis.</li>
+                <li>Applied analytical thinking to real-world economic data and market trends.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section-head reveal sub-head">
+          <h3 class="h3-style">Certifications <span class="gradient-text">&amp; Learning</span></h3>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card glass reveal" data-tilt>
+            <i class="fa-solid fa-file-excel"></i>
+            <div><h4>Microsoft Excel for Data Analysis</h4><p class="mono">Coursera</p></div>
+          </div>
+          <div class="cert-card glass reveal delay-1" data-tilt>
+            <i class="fa-solid fa-database"></i>
+            <div><h4>SQL for Data Analysis</h4><p class="mono">Udemy</p></div>
+          </div>
+          <div class="cert-card glass reveal delay-2" data-tilt>
+            <i class="fa-brands fa-python"></i>
+            <div><h4>Python for Data Analysis</h4><p class="mono">Udemy</p></div>
+          </div>
+          <div class="cert-card glass reveal delay-3" data-tilt>
+            <i class="fa-solid fa-chart-line"></i>
+            <div><h4>Power BI for Business Intelligence</h4><p class="mono">Microsoft Learn</p></div>
+          </div>
+          <div class="cert-card glass reveal delay-4" data-tilt>
+            <i class="fa-solid fa-chart-simple"></i>
+            <div><h4>Data Visualization with Tableau</h4><p class="mono">Coursera</p></div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="interests reveal delay-2">
+          <span class="mono interests-label"><i class="fa-solid fa-heart"></i> Interests :</span>
+          <span class="interest-chip mono">Data Analysis &amp; Visualization</span>
+          <span class="interest-chip mono">Technology &amp; Innovation</span>
+          <span class="interest-chip mono">Continuous Learning in Analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CONTACT ======== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="mono section-tag">&lt;contact /&gt;</p>
+          <h2>Let's Turn Data Into <span class="gradient-text">Decisions</span></h2>
+        </div>
+        <p class="contact-lead reveal delay-1">
+          I'm actively looking for Data Analyst opportunities and collaborations.
+          My inbox is always open — let's talk numbers! 📊
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:jadhavniraj793@gmail.com" class="contact-card glass reveal" data-tilt>
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p class="mono">jadhavniraj793@gmail.com</p>
+            <span class="card-cta mono">Write me →</span>
+          </a>
+          <a href="tel:+917208701481" class="contact-card glass reveal delay-1" data-tilt>
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p class="mono">+91 72087 01481</p>
+            <span class="card-cta mono">Call me →</span>
+          </a>
+          <a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener" class="contact-card glass reveal delay-2" data-tilt>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <h3>LinkedIn</h3>
+            <p class="mono">niraj-jadhav-b313ba39a</p>
+            <span class="card-cta mono">Connect →</span>
+          </a>
+          <div class="contact-card glass reveal delay-3" data-tilt>
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Location</h3>
+            <p class="mono">Koper, Mumbai, India</p>
+            <span class="card-cta mono">Open to relocation / remote</span>
+          </div>
+        </div>
+
+        <div class="contact-cta reveal delay-2">
+          <a href="mailto:jadhavniraj793@gmail.com?subject=Opportunity%20for%20Data%20Analyst" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Say Hello
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="mono">&lt;/&gt; Designed &amp; built with <span class="heart">♥</span> and lots of <span class="hl">data</span></p>
+      <p class="mono">© 2026 Niraj Laxman Jadhav — Data Analyst</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
