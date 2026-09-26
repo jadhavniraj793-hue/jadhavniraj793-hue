@@ -246,8 +246,6 @@
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
-    // debug hook (used by the visual QA workflow)
-    window.__bg3d = { renderer, camera };
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x050816);
@@ -255,6 +253,8 @@
 
     const camera = new THREE.PerspectiveCamera(62, window.innerWidth / window.innerHeight, 0.1, 400);
     camera.position.set(0, 0, 4);
+    // debug hook (used by the visual QA workflow) — must come after `camera` exists
+    window.__bg3d = { renderer, camera };
 
     const isSmall = window.innerWidth < 768;
 
