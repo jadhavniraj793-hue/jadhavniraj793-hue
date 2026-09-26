@@ -46,4 +46,21 @@ await new Promise((r) => setTimeout(r, 2000));
 await page.screenshot({ path: "shots/mobile-skills.png" });
 
 console.log("PAGE ERRORS:", errors.length ? JSON.stringify(errors, null, 2) : "none");
+
+// diagnostics: WebGL/THREE loaded, icons loaded
+const diag = await page.evaluate(async () => {
+  const out = { three: typeof window.THREE !== "undefined", brokenImgs: [] };
+  // restart at top for a clean check
+  const canvas = document.getElementById("bg3d");
+  out.canvasSize = canvas ? `${canvas.width}x${canvas.height}` : "missing";
+  out.webgl = canvas ? !!(canvas.getContext("webgl") || canvas.getContext("experimental-webgl")) : false;
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.complete || img.naturalWidth === 0) out.brokenImgs.push(img.getAttribute("src"));
+  });
+  return out;
+});
+fs.writeFileSync("shots/errors.txt",
+  "PAGE ERRORS:\n" + (errors.length ? errors.join("\n") : "none") +
+  "\n\nDIAGNOSTICS:\n" + JSON.stringify(diag, null, 2) + "\n");
+
 await browser.close();
