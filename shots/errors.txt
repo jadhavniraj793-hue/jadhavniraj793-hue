@@ -3,12 +3,12 @@ none
 
 DESKTOP RENDERER (after hero screenshot):
 {
-  "hookSet": false,
-  "initError": "Cannot access 'camera' before initialization",
-  "rendererActive": false,
-  "drawCalls": 0,
+  "hookSet": true,
+  "initError": null,
+  "rendererActive": true,
+  "drawCalls": 16,
   "triangles": 0,
-  "points": 0
+  "points": 1100
 }
 
 MOBILE DIAGNOSTICS:
@@ -16,5 +16,8 @@ MOBILE DIAGNOSTICS:
   "three": true,
   "brokenImgs": [],
   "canvasSize": "390x844",
-  "rendererActive": false
+  "rendererActive": true,
+  "drawCalls": 10,
+  "triangles": 0,
+  "points": 550
 }
