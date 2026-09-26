@@ -6,5 +6,5 @@ DIAGNOSTICS:
   "three": true,
   "brokenImgs": [],
   "canvasSize": "390x844",
-  "webgl": false
+  "rendererActive": false
 }
