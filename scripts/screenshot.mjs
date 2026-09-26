@@ -23,6 +23,7 @@ await page.goto("http://127.0.0.1:8000/", { waitUntil: "networkidle0", timeout: 
 await new Promise((r) => setTimeout(r, 4500)); // preloader + hero entrance
 
 const sections = ["hero", "about", "skills", "projects", "experience", "education", "contact"];
+let desktopDiag = null;
 for (const id of sections) {
   await page.evaluate(
     (sel) => {
@@ -34,6 +35,19 @@ for (const id of sections) {
   );
   await new Promise((r) => setTimeout(r, 2000)); // reveal animations settle
   await page.screenshot({ path: `shots/${id}.png` });
+  if (id === "hero") {
+    desktopDiag = await page.evaluate(() => {
+      const bg = window.__bg3d;
+      return {
+        hookSet: !!bg,
+        initError: window.__bg3dError || null,
+        rendererActive: bg ? !bg.renderer.getContext().isContextLost() : false,
+        drawCalls: bg ? bg.renderer.info.render.calls : 0,
+        triangles: bg ? bg.renderer.info.render.triangles : 0,
+        points: bg ? bg.renderer.info.render.points : 0
+      };
+    });
+  }
 }
 
 // mobile hero + mobile skills
@@ -69,6 +83,7 @@ const diag = await page.evaluate(async () => {
 });
 fs.writeFileSync("shots/errors.txt",
   "PAGE ERRORS:\n" + (errors.length ? errors.join("\n") : "none") +
-  "\n\nDIAGNOSTICS:\n" + JSON.stringify(diag, null, 2) + "\n");
+  "\n\nDESKTOP RENDERER (after hero screenshot):\n" + JSON.stringify(desktopDiag, null, 2) +
+  "\n\nMOBILE DIAGNOSTICS:\n" + JSON.stringify(diag, null, 2) + "\n");
 
 await browser.close();

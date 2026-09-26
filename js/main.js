@@ -404,8 +404,10 @@
 
   try {
     initThree();
+    window.__bg3dError = null;
   } catch (err) {
     // 3D is decorative — the page must work even if WebGL is unavailable
+    window.__bg3dError = String(err && err.message || err);
     console.warn("3D background disabled:", err);
   }
 })();
