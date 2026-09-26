@@ -1,0 +1,35 @@
+name: Portfolio Visual QA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install puppeteer-core
+        run: npm install puppeteer-core --no-save --no-package-lock
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 &
+          sleep 1
+
+      - name: Take screenshots
+        run: node scripts/screenshot.mjs
+
+      - name: Upload screenshots as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-screenshots
+          path: shots/
+          retention-days: 14
