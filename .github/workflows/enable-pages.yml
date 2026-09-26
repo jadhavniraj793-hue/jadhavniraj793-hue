@@ -1,0 +1,40 @@
+name: Enable GitHub Pages
+
+# Runs once on main; creates the Pages site (main / root) if it doesn't
+# exist yet, so the portfolio is served at the github.io URL.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  enable-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Pages site (main / root)
+        run: |
+          code=$(curl -s -o /tmp/pages.json -w "%{http_code}" -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages" \
+            -d '{"source":{"branch":"main","path":"/"}}')
+          echo "HTTP $code"
+          cat /tmp/pages.json || true
+          # 201 = created, 409 = already exists — both are success
+          if [ "$code" != "201" ] && [ "$code" != "409" ]; then
+            echo "::error::Could not enable Pages (HTTP $code)"
+            exit 1
+          fi
+
+      - name: Report site URL
+        run: |
+          sleep 5
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pages" \
+            | tee /tmp/status.json
+          url=$(python3 -c "import json;print(json.load(open('/tmp/status.json')).get('html_url',''))" 2>/dev/null || true)
+          [ -n "$url" ] && echo "Site URL: $url"
