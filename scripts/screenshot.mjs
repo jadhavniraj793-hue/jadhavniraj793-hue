@@ -9,7 +9,7 @@ fs.mkdirSync("shots", { recursive: true });
 const exe = process.env.CHROME_PATH || "/usr/bin/google-chrome";
 const browser = await puppeteer.launch({
   executablePath: exe,
-  args: ["--no-sandbox", "--disable-dev-shm-usage", "--use-gl=swiftshader", "--enable-unsafe-swiftshader"]
+  args: ["--no-sandbox", "--disable-dev-shm-usage", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"]
 });
 
 const page = await browser.newPage();
