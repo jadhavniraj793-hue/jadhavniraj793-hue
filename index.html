@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niraj Jadhav — 3D Artist &amp; Motion Designer</title>
+    <meta name="description" content="Portfolio of Niraj Jadhav — 3D artist and motion designer crafting characters, products and worlds in Blender & After Effects. From first polygon to final frame." />
+    <meta name="theme-color" content="#0b0b10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Niraj Jadhav — 3D Artist & Motion Designer" />
+    <meta property="og:description" content="Characters, products & worlds — modeled in Blender, animated with intent, rendered to make people feel something." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <p class="preloader__name">NIRAJ JADHAV — 3D &amp; MOTION</p>
+        <div class="preloader__counter"><span id="preloadNum">000</span><span class="preloader__pct">%</span></div>
+        <div class="preloader__bar"><span id="preloadBar"></span></div>
+      </div>
+    </div>
+    <noscript>
+      <style>
+        .preloader { display: none; }
+        #hero-canvas { opacity: 1; }
+        [data-reveal] { opacity: 1 !important; transform: none !important; }
+        .cursor-dot, .cursor-ring { display: none; }
+      </style>
+    </noscript>
+
+    <!-- ============ CUSTOM CURSOR ============ -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span>VIEW</span></div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+    <!-- ============ GRAIN OVERLAY ============ -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+      <a class="nav__logo" href="#top" data-hover>NJ<span>.</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work" data-hover>Work</a>
+        <a href="#about" data-hover>About</a>
+        <a href="#services" data-hover>Services</a>
+        <a href="#contact" data-hover>Contact</a>
+      </nav>
+      <a class="nav__cta" href="#contact" data-hover>Let’s talk</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu__nav" aria-label="Menu">
+        <a class="menu__link" href="#work" style="--i: 0"><span class="menu__idx">01</span>Work</a>
+        <a class="menu__link" href="#about" style="--i: 1"><span class="menu__idx">02</span>About</a>
+        <a class="menu__link" href="#services" style="--i: 2"><span class="menu__idx">03</span>Services</a>
+        <a class="menu__link" href="#contact" style="--i: 3"><span class="menu__idx">04</span>Contact</a>
+      </nav>
+      <div class="menu__foot">
+        <a href="mailto:jadhavniraj793@gmail.com" data-hover>jadhavniraj793@gmail.com</a>
+        <div class="menu__socials">
+          <a href="https://instagram.com/nirajjadhav4834" target="_blank" rel="noopener" data-hover>Instagram</a>
+          <a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener" data-hover>LinkedIn</a>
+          <a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener" data-hover>GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__glow hero__glow--a"></div>
+          <div class="hero__glow hero__glow--b"></div>
+        </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            <span class="pill"><span class="pill__dot"></span>Available for freelance</span>
+            <span class="hero__eyebrow-text">3D Artist &amp; Motion Designer</span>
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__line"><span class="hero__line-in">Building</span></span>
+            <span class="hero__line"><span class="hero__line-in"><em class="outline">worlds</em> in</span></span>
+            <span class="hero__line"><span class="hero__line-in"><em class="grad">motion</em><em class="hero__bang">.</em></span></span>
+          </h1>
+          <p class="hero__sub">
+            I design &amp; animate characters, products and worlds in Blender and After
+            Effects — from the first polygon to the final frame.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#work" data-magnetic data-hover>
+              View selected work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact" data-magnetic data-hover>Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero__badge" aria-hidden="true">
+          <svg viewBox="0 0 100 100" class="hero__badge-svg">
+            <defs>
+              <path id="badge-circle" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+            </defs>
+            <text class="hero__badge-text">
+              <textPath href="#badge-circle">SCROLL — EXPLORE — SCROLL — EXPLORE — </textPath>
+            </text>
+          </svg>
+          <svg class="hero__badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+        </div>
+
+        <div class="hero__meta">
+          <p class="hero__meta-item">Based in India — working worldwide</p>
+          <p class="hero__meta-item hero__meta-item--scroll">
+            Scroll
+            <span class="hero__scroll-line"><span></span></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>3D Animation</span><i>✦</i><span class="is-outline">Motion Design</span><i>✦</i><span>Character Art</span><i>✦</i><span class="is-outline">World Building</span><i>✦</i><span>Product Viz</span><i>✦</i><span class="is-outline">Blender</span><i>✦</i><span>After Effects</span><i>✦</i>
+        </div>
+        <div class="marquee__track">
+          <span>3D Animation</span><i>✦</i><span class="is-outline">Motion Design</span><i>✦</i><span>Character Art</span><i>✦</i><span class="is-outline">World Building</span><i>✦</i><span>Product Viz</span><i>✦</i><span class="is-outline">Blender</span><i>✦</i><span>After Effects</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- ============ WORK ============ -->
+      <section class="section work" id="work">
+        <header class="section__head" data-reveal>
+          <p class="section__label"><span class="section__index">01</span><span class="section__tag">Portfolio</span></p>
+          <h2 class="section__title">Selected<br /><em class="outline">works</em></h2>
+          <p class="section__note">
+            Five pieces I’m proud of — studies in motion, light and storytelling.
+            Bigger drops land on Instagram first.
+          </p>
+        </header>
+        <div class="work__grid" id="workGrid"><!-- rendered from src/data.js --></div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section about" id="about">
+        <header class="section__head" data-reveal>
+          <p class="section__label"><span class="section__index">02</span><span class="section__tag">About me</span></p>
+          <h2 class="section__title">Behind<br /><em class="grad">the renders</em></h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__media" data-reveal>
+            <div class="about__imgwrap" data-parallax="0.06">
+              <img alt="Niraj’s 3D workspace — dual monitors, tablet and a lot of coffee" id="aboutImg" />
+            </div>
+            <span class="about__tag">The desk where it happens — 2:47 AM</span>
+          </div>
+
+          <div class="about__body">
+            <h3 class="about__statement" data-reveal>
+              I turn <em class="grad">polygons</em> into stories.
+            </h3>
+            <p data-reveal style="--d: 0.05s">
+              Hey — I’m <strong>Niraj</strong>, a self-taught 3D artist &amp; motion designer
+              from India. What began as curiosity about how games were made turned into a
+              full-blown obsession with making still frames <em>move</em>.
+            </p>
+            <p data-reveal style="--d: 0.1s">
+              My toolkit is <strong>Blender</strong>, <strong>After Effects</strong>,
+              <strong>Illustrator</strong> &amp; <strong>Figma</strong>. I love owning the whole
+              pipeline — blocking, look-dev, animation, lighting — and yes, the 47th render
+              attempt at 2 AM.
+            </p>
+            <p data-reveal style="--d: 0.15s">
+              Right now I’m open to freelance work and junior roles in 3D &amp; motion.
+              If you have a world that needs building, <a href="#contact" class="link" data-hover>say hi</a>.
+            </p>
+
+            <div class="stats" data-reveal style="--d: 0.2s">
+              <div class="stat"><span class="stat__num"><span data-count="3">0</span>+</span><span class="stat__label">Years creating</span></div>
+              <div class="stat"><span class="stat__num"><span data-count="20">0</span>+</span><span class="stat__label">Projects finished</span></div>
+              <div class="stat"><span class="stat__num"><span data-count="48">0</span>K+</span><span class="stat__label">Frames rendered</span></div>
+              <div class="stat"><span class="stat__num"><span data-count="9999">0</span>+</span><span class="stat__label">Cups of chai</span></div>
+            </div>
+
+            <ul class="tools" data-reveal style="--d: 0.25s" aria-label="Tools I use">
+              <li class="tool">Blender</li>
+              <li class="tool">After Effects</li>
+              <li class="tool">Illustrator</li>
+              <li class="tool">Figma</li>
+              <li class="tool">Aseprite</li>
+              <li class="tool">GIMP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section services" id="services">
+        <header class="section__head" data-reveal>
+          <p class="section__label"><span class="section__index">03</span><span class="section__tag">Services</span></p>
+          <h2 class="section__title">What<br /><em class="outline">I do</em></h2>
+          <p class="section__note">
+            Every project gets the full pipeline treatment — concept, blockout,
+            look-dev, animation and a final grade.
+          </p>
+        </header>
+
+        <div class="services__list" data-reveal>
+          <article class="service" data-hover>
+            <span class="service__idx">01</span>
+            <h3 class="service__name">3D Animation</h3>
+            <p class="service__desc">Character &amp; object animation with actual personality — walk cycles to weight shifts, keyed by hand and polished in the graph editor.</p>
+            <span class="service__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </article>
+          <article class="service" data-hover>
+            <span class="service__idx">02</span>
+            <h3 class="service__name">Motion Graphics</h3>
+            <p class="service__desc">Idents, typography and logo animations that move with intent — rhythm, easing and sound in perfect sync.</p>
+            <span class="service__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </article>
+          <article class="service" data-hover>
+            <span class="service__idx">03</span>
+            <h3 class="service__name">World &amp; Character Design</h3>
+            <p class="service__desc">From thumbnail to final asset — environments, props and characters built to be felt, not just seen.</p>
+            <span class="service__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </article>
+          <article class="service" data-hover>
+            <span class="service__idx">04</span>
+            <h3 class="service__name">Product Visualization</h3>
+            <p class="service__desc">Studio-grade renders and launch films that make products irresistible — materials, lighting, drama.</p>
+            <span class="service__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER / CONTACT ============ -->
+      <footer class="footer" id="contact">
+        <p class="footer__label" data-reveal>04 / Contact — got a world to build?</p>
+        <h2 class="footer__cta" data-reveal>
+          <span class="footer__line">Let’s make</span>
+          <span class="footer__line footer__line--grad">something unreal.</span>
+        </h2>
+        <div class="footer__actions" data-reveal>
+          <a class="footer__mail" href="mailto:jadhavniraj793@gmail.com" data-magnetic data-hover>
+            jadhavniraj793@gmail.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <ul class="footer__socials" data-reveal>
+          <li><a href="https://instagram.com/nirajjadhav4834" target="_blank" rel="noopener" data-hover>Instagram ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/niraj-jadhav-b313ba39a" target="_blank" rel="noopener" data-hover>LinkedIn ↗</a></li>
+          <li><a href="https://github.com/jadhavniraj793-hue" target="_blank" rel="noopener" data-hover>GitHub ↗</a></li>
+          <li><a href="mailto:jadhavniraj793@gmail.com" data-hover>Email ↗</a></li>
+        </ul>
+        <div class="footer__bar">
+          <span>© 2026 Niraj Jadhav</span>
+          <span class="footer__made">Made with Blender &amp; caffeine</span>
+          <span>Local time — <span id="localTime">--:--:--</span></span>
+          <button class="footer__top" id="toTop" data-hover>Back to top ↑</button>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
