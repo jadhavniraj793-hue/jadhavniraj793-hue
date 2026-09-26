@@ -91,16 +91,21 @@
   }
 
   if (hamburger && navLinks) {
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("open");
-      navLinks.classList.toggle("open");
+    const setMenu = (open) => {
+      hamburger.classList.toggle("open", open);
+      navLinks.classList.toggle("open", open);
+      hamburger.setAttribute("aria-expanded", String(open));
+      hamburger.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    };
+
+    hamburger.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+    navLinks.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navLinks.classList.contains("open")) {
+        setMenu(false);
+        hamburger.focus();
+      }
     });
-    navLinks.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        hamburger.classList.remove("open");
-        navLinks.classList.remove("open");
-      })
-    );
   }
 
   // active link highlighting
@@ -242,6 +247,12 @@
   function initThree() {
     const canvas = document.getElementById("bg3d");
     if (!canvas || typeof THREE === "undefined") return;
+    // Keep the portfolio comfortable and battery-friendly for visitors who
+    // explicitly request less motion; the CSS ambient gradients remain.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      canvas.hidden = true;
+      return;
+    }
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
