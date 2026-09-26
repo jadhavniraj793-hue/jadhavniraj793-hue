@@ -394,11 +394,12 @@ body::before {
   line-height: 1.04;
   letter-spacing: 0.01em;
   margin-bottom: 1.4rem;
-  background: linear-gradient(100deg, #ffffff 20%, #9fd8ff 45%, #b79cff 70%, #ff9ad5 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 6px 30px rgba(0, 229, 255, 0.18));
+  color: #f2f6ff;
+  /* NOTE: no background-clip:text here — 3D-transformed letter spans get
+     composited to their own layers, which breaks the clip (invisible text) */
+  text-shadow:
+    0 0 24px rgba(0, 229, 255, 0.28),
+    0 6px 42px rgba(139, 92, 246, 0.35);
   word-break: keep-all;
 }
 .hero-name .ch {
@@ -1178,6 +1179,8 @@ body.loaded .hero-name .ch { animation-play-state: running; }
   background: var(--grad);
   color: #04101c;
   box-shadow: 0 8px 24px rgba(0, 229, 255, 0.3);
+}
+.contact-ic0 8px 24px rgba(0, 229, 255, 0.3);
 }
 .contact-icon svg { width: 26px; height: 26px; }
 .contact-label {
