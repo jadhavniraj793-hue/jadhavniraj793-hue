@@ -1,7 +1,17 @@
 PAGE ERRORS:
 none
 
-DIAGNOSTICS:
+DESKTOP RENDERER (after hero screenshot):
+{
+  "hookSet": false,
+  "initError": "Cannot access 'camera' before initialization",
+  "rendererActive": false,
+  "drawCalls": 0,
+  "triangles": 0,
+  "points": 0
+}
+
+MOBILE DIAGNOSTICS:
 {
   "three": true,
   "brokenImgs": [],
