@@ -1,0 +1,38 @@
+name: Portfolio Visual QA
+
+on:
+  push:
+    branches: ["arena/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install puppeteer-core
+        run: npm install puppeteer-core --no-save --no-package-lock
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 &
+          sleep 1
+
+      - name: Take screenshots
+        run: node scripts/screenshot.mjs
+
+      - name: Commit screenshots back
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f shots/
+          git commit -m "chore: visual QA screenshots [skip ci]" || echo "nothing to commit"
+          git push
