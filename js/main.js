@@ -246,6 +246,8 @@
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
+    // debug hook (used by the visual QA workflow)
+    window.__bg3d = { renderer, camera };
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x050816);

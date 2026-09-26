@@ -50,10 +50,18 @@ console.log("PAGE ERRORS:", errors.length ? JSON.stringify(errors, null, 2) : "n
 // diagnostics: WebGL/THREE loaded, icons loaded
 const diag = await page.evaluate(async () => {
   const out = { three: typeof window.THREE !== "undefined", brokenImgs: [] };
-  // restart at top for a clean check
   const canvas = document.getElementById("bg3d");
   out.canvasSize = canvas ? `${canvas.width}x${canvas.height}` : "missing";
-  out.webgl = canvas ? !!(canvas.getContext("webgl") || canvas.getContext("experimental-webgl")) : false;
+  const bg = window.__bg3d;
+  if (bg) {
+    const gl = bg.renderer.getContext();
+    out.rendererActive = !gl.isContextLost();
+    out.drawCalls = bg.renderer.info.render.calls;
+    out.triangles = bg.renderer.info.render.triangles;
+    out.points = bg.renderer.info.render.points;
+  } else {
+    out.rendererActive = false;
+  }
   document.querySelectorAll("img").forEach((img) => {
     if (!img.complete || img.naturalWidth === 0) out.brokenImgs.push(img.getAttribute("src"));
   });
