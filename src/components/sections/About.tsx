@@ -13,7 +13,7 @@ const AboutScene = lazy(() => import('../three/AboutScene'));
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-24 py-24 sm:py-28">
+    <section id="about" className="relative scroll-mt-24 overflow-x-clip py-24 sm:py-28">
       <div className="section-shell">
         <SectionHeading
           eyebrow="01 — Profile"
@@ -25,7 +25,7 @@ export function About() {
           {/* 3D profile card */}
           <Reveal>
             <div className="relative mx-auto w-full max-w-sm">
-              <div className="pointer-events-none absolute -inset-10 -z-0 opacity-90">
+              <div className="pointer-events-none absolute -inset-6 -z-0 opacity-90 sm:-inset-10">
                 <Suspense fallback={null}>
                   <AboutScene />
                 </Suspense>

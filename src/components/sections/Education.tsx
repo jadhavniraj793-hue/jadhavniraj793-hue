@@ -10,7 +10,7 @@ const EducationScene = lazy(() => import('../three/EducationScene'));
 
 export function Education() {
   return (
-    <section id="education" className="relative scroll-mt-24 py-24 sm:py-28">
+    <section id="education" className="relative scroll-mt-24 overflow-x-clip py-24 sm:py-28">
       <div className="section-shell">
         <SectionHeading
           eyebrow="07 — Foundation"
