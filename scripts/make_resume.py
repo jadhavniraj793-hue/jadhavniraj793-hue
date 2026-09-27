@@ -2,6 +2,7 @@
 """Generate resume.pdf — Niraj Laxman Jadhav, Data Analyst.
 Clean single-page layout that echoes the portfolio's navy/teal theme.
 Run:  python3 scripts/make_resume.py   (requires fpdf2 + DejaVu fonts)
+Output: public/resume.pdf — served by the Vite site and linked from the hero.
 """
 import os
 
@@ -197,7 +198,7 @@ r.set_text_color(*INK)
 r.cell(0, 4.4, "Data Analysis & Visualization   •   Technology & Innovation   •   Continuous Learning in Analytics",
        new_x="LMARGIN", new_y="NEXT")
 
-out = os.path.join(ROOT, "resume.pdf")
+out = os.path.join(ROOT, "public", "resume.pdf")
 r.output(out)
 size = os.path.getsize(out)
 print(f"resume.pdf written ({size/1024:.1f} KB, {r.page_no()} page{'s' if r.page_no() > 1 else ''})")

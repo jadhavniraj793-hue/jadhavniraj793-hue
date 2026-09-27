@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
+
+  visual-qa:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm install puppeteer-core --no-save --no-package-lock
+      - name: Serve dist
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory dist &
+          sleep 1
+      - name: Layout & runtime QA
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node scripts/layout-qa.mjs
+
+      - name: Screenshots
+        if: always()
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node scripts/screenshot.mjs
+      - name: Console error report
+        if: always()
+        run: cat shots/console-report.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-screenshots
+          path: shots/
+          retention-days: 7

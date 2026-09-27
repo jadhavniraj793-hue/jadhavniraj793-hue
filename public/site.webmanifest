@@ -1,0 +1,10 @@
+{
+  "name": "Niraj Laxman Jadhav — Data Analyst Portfolio",
+  "short_name": "Niraj Jadhav",
+  "description": "Data Analyst portfolio showcasing projects in Excel, SQL, Python, Power BI and Tableau.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05070f",
+  "theme_color": "#05070f",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
