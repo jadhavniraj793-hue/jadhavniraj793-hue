@@ -42,7 +42,13 @@ jobs:
         run: |
           python3 -m http.server 8000 --bind 127.0.0.1 --directory dist &
           sleep 1
+      - name: Layout & runtime QA
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node scripts/layout-qa.mjs
+
       - name: Screenshots
+        if: always()
         env:
           CHROME_PATH: /usr/bin/google-chrome
         run: node scripts/screenshot.mjs
