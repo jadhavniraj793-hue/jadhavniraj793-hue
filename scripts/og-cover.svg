@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070f"/>
+      <stop offset="55%" stop-color="#060b1a"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="90%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8edf7"/>
+      <stop offset="55%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94a3b8" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <g transform="translate(80,86)">
+    <rect x="0" y="0" width="54" height="54" rx="14" fill="none" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="1.6"/>
+    <text x="27" y="36" font-size="22" font-weight="700" fill="#67e8f9" text-anchor="middle">NJ</text>
+    <text x="74" y="24" font-size="15" letter-spacing="6" fill="#9aa8c4">NIRAJ LAXMAN JADHAV</text>
+    <text x="74" y="46" font-size="13" letter-spacing="4" fill="#64748b">KOPAR, MUMBAI · INDIA</text>
+  </g>
+
+  <text x="80" y="290" font-size="92" font-weight="800" letter-spacing="-2" fill="url(#txt)">DATA ANALYST</text>
+  <text x="80" y="356" font-size="40" font-weight="600" fill="#e8edf7">Turning Data Into Decisions.</text>
+  <text x="80" y="404" font-size="22" fill="#9aa8c4">Excel · SQL · Python · Power BI · Tableau</text>
+
+  <g transform="translate(80,470)">
+    <rect x="0" y="0" width="212" height="72" rx="16" fill="#0b1226" stroke="#22d3ee" stroke-opacity="0.25"/>
+    <text x="18" y="30" font-size="13" letter-spacing="3" fill="#64748b">FEATURED PROJECTS</text>
+    <text x="18" y="57" font-size="24" font-weight="700" fill="#e8edf7">03</text>
+    <rect x="232" y="0" width="212" height="72" rx="16" fill="#0b1226" stroke="#22d3ee" stroke-opacity="0.25"/>
+    <text x="250" y="30" font-size="13" letter-spacing="3" fill="#64748b">ANALYTICS TOOLS</text>
+    <text x="250" y="57" font-size="24" font-weight="700" fill="#e8edf7">05+</text>
+    <rect x="464" y="0" width="256" height="72" rx="16" fill="#0b1226" stroke="#22d3ee" stroke-opacity="0.25"/>
+    <text x="482" y="30" font-size="13" letter-spacing="3" fill="#64748b">CERTIFICATIONS</text>
+    <text x="482" y="57" font-size="24" font-weight="700" fill="#e8edf7">05</text>
+  </g>
+
+  <g transform="translate(852,196)" opacity="0.95">
+    <circle cx="150" cy="150" r="140" fill="none" stroke="#22d3ee" stroke-opacity="0.22"/>
+    <circle cx="150" cy="150" r="118" fill="none" stroke="#3b82f6" stroke-opacity="0.2"/>
+    <circle cx="150" cy="150" r="88" fill="none" stroke="#a78bfa" stroke-opacity="0.18"/>
+    <g transform="translate(66,250)">
+      <rect x="0" y="-70" width="24" height="70" rx="6" fill="url(#bar)" opacity="0.95"/>
+      <rect x="38" y="-116" width="24" height="116" rx="6" fill="url(#bar)" opacity="0.95"/>
+      <rect x="76" y="-92" width="24" height="92" rx="6" fill="url(#bar)" opacity="0.95"/>
+      <rect x="114" y="-148" width="24" height="148" rx="6" fill="url(#bar)" opacity="0.95"/>
+    </g>
+    <polyline points="66,120 118,92 166,104 214,54" fill="none" stroke="#67e8f9" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="66" cy="120" r="6" fill="#e8edf7"/>
+    <circle cx="118" cy="92" r="6" fill="#e8edf7"/>
+    <circle cx="166" cy="104" r="6" fill="#e8edf7"/>
+    <circle cx="214" cy="54" r="7" fill="#22d3ee"/>
+  </g>
+
+  <rect x="0" y="622" width="1200" height="8" fill="url(#txt)" opacity="0.8"/>
+</svg>

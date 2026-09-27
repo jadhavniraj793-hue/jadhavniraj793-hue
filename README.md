@@ -37,3 +37,13 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+---
+
+## 🌐 Portfolio Website
+
+This repository also hosts my interactive 3D Data Analyst portfolio — built with React, TypeScript, Vite, Three.js and Recharts.
+
+- Source: `src/` · Static shell: `index.html` · Assets: `public/`
+- Developer guide: [`docs/portfolio-site.md`](docs/portfolio-site.md)
+- Run locally: `npm install && npm run dev`
