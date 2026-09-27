@@ -115,7 +115,7 @@ for (const vp of VIEWPORTS) {
         let scrollable = false;
         while (node && node !== document.body) {
           const s = getComputedStyle(node);
-          if (s.overflowX === 'auto' || s.overflowX === 'scroll' || s.overflow === 'hidden' || s.overflowX === 'hidden') {
+          if (['auto', 'scroll', 'hidden', 'clip'].includes(s.overflowX) || ['hidden', 'clip'].includes(s.overflow)) {
             scrollable = true;
             break;
           }
