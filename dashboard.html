@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Analytics Dashboard | Niraj Jadhav</title>
+  <meta name="description" content="Interactive sales analytics dashboard built by Niraj Jadhav — KPIs, revenue trends, category breakdown, regional performance and top products." />
+  <meta name="theme-color" content="#050816" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body class="dash-body">
+
+  <header class="dash-topbar">
+    <a href="index.html" class="dash-back" aria-label="Back to portfolio">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Portfolio
+    </a>
+    <div class="dash-title">
+      <h1>Sales Analytics Dashboard</h1>
+      <p>Interactive demo · built with vanilla JS + SVG · sample retail dataset</p>
+    </div>
+    <div class="dash-controls">
+      <label class="dash-field">
+        <span>Year</span>
+        <select id="fYear">
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="all" selected>2024 + 2025</option>
+        </select>
+      </label>
+      <label class="dash-field">
+        <span>Region</span>
+        <select id="fRegion"><option value="all">All regions</option></select>
+      </label>
+      <label class="dash-field">
+        <span>Category</span>
+        <select id="fCategory"><option value="all">All categories</option></select>
+      </label>
+      <button class="btn btn-sm btn-outline" id="btnReset" type="button">Reset</button>
+      <button class="btn btn-sm btn-outline" id="btnExport" type="button">Export CSV</button>
+    </div>
+  </header>
+
+  <main class="dash-wrap">
+
+    <!-- KPI ROW -->
+    <section class="kpi-grid" id="kpiGrid" aria-label="Key metrics"></section>
+
+    <!-- CHARTS -->
+    <section class="chart-grid">
+      <article class="card card-wide">
+        <div class="card-head">
+          <h2>Revenue Trend</h2>
+          <span class="chip" id="trendChip">monthly</span>
+        </div>
+        <div class="chart" id="chartTrend"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head"><h2>Revenue by Category</h2></div>
+        <div class="chart" id="chartDonut"></div>
+        <ul class="legend" id="donutLegend"></ul>
+      </article>
+
+      <article class="card">
+        <div class="card-head"><h2>Revenue by Region</h2></div>
+        <div class="chart" id="chartBars"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head"><h2>Profit Margin by Category</h2></div>
+        <div class="chart" id="chartMargin"></div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="card-head">
+          <h2>Top Products</h2>
+          <span class="chip" id="rowChip"></span>
+        </div>
+        <div class="table-scroll">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th data-sort="product">Product</th>
+                <th data-sort="category">Category</th>
+                <th data-sort="region">Region</th>
+                <th data-sort="units" class="num">Units</th>
+                <th data-sort="revenue" class="num">Revenue</th>
+                <th data-sort="profit" class="num">Profit</th>
+                <th data-sort="margin" class="num">Margin</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <p class="dash-foot">Sample data generated for demonstration · © <span id="yr"></span> Niraj Laxman Jadhav</p>
+  </main>
+
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
